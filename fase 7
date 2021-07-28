@@ -1,0 +1,8 @@
+public MeuAdicionarCliente(JFrame father) {
+ initComponents();
+ this.father = father;
+ }
+ 
+public MeuAdicionarCliente() {
+ initComponents();
+ }
