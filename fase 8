@@ -1,0 +1,21 @@
+private void btnAdicionarActionPerformed(java.awt.event.ActionEvent evt) {
+ 
+String nome = txtNome.getText();
+ String cpf = txtCPF.getText();
+ 
+String query = "INSERT INTO cliente (nome, cpf) VALUES ('" + nome + "', '" + cpf + "')";
+ 
+try{
+ Statement stmt = conexao.createStatement();
+ stmt.executeUpdate(query);
+ conexao.close();
+ }catch(Exception e){
+ e.printStackTrace();
+ }
+ 
+ father.invalidate();
+ father.validate();
+ father.repaint();
+ this.dispose();
+ 
+}
