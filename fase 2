@@ -1,0 +1,8 @@
+private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {
+// TODO add your handling code here:
+ 
+MeusClientes mc = new MeusClientes();
+mc.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+mc.setVisible(true);
+ 
+}

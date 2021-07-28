@@ -1,0 +1,9 @@
+public static void main(String[] args){
+ 
+MeuMenu mm = new MeuMenu();
+ 
+mm.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+ 
+mm.setVisible(true);
+ 
+}

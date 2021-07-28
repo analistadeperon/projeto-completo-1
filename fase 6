@@ -1,0 +1,4 @@
+public class MeuAdicionarCliente extends javax.swing.JFrame {
+ 
+ Connection conexao = MinhaConexao.getInstance().sqlConnection;
+ JFrame father;

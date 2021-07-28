@@ -1,0 +1,3 @@
+MeuAdicionarCliente mac = new MeuAdicionarCliente(this);
+ mac.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+ mac.setVisible(true);
