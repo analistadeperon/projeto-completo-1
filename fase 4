@@ -1,0 +1,30 @@
+public void atualizaClientes(){
+ 
+ArrayList&amp;lt;Cliente&amp;gt; clientes = new ArrayList&amp;lt;Cliente&amp;gt;();
+Connection conexao = MinhaConexao.getInstance().sqlConnection;
+//fill client list
+String query = "SELECT nome, cpf FROM cliente";
+Statement stmt = null;
+try{
+stmt = conexao.createStatement();
+ResultSet rs = stmt.executeQuery(query);
+while(rs.next()){
+String nome = rs.getString("nome");
+String cpf = rs.getString("cpf");
+ 
+//adiciona cliente na lista
+clientes.add(new Cliente(nome, cpf));
+}
+}catch(Exception e){
+e.printStackTrace();
+}
+ 
+DefaultListModel listModel = new DefaultListModel();
+ 
+for(Cliente c : clientes){
+listModel.addElement(new String(c.getNome() + " - " + c.getCPF()));
+System.out.println("Client name: " + c.getNome());
+}
+ 
+listClientes.setModel(listModel);
+}
